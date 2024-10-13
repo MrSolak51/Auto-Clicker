@@ -1,2 +1,2 @@
 # Auto-Clicker
-Auto Clicker with C GTK+ 
+A simple autoclicker application made using C with GTK and windows library.
