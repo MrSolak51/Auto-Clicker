@@ -1,2 +1,2 @@
 # Auto-Clicker
-A simple autoclicker application made using C with GTK and windows libraries.
+A program that simulates mouse and keyboard events. Created using C with GTK and Windows libraries.
