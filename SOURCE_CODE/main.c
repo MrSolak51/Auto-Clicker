@@ -1,5 +1,4 @@
 #include <gtk/gtk.h>
-#include <stdio.h>
 #include <windows.h>
 #include <pthread.h>
 #include <stdbool.h>
