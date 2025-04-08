@@ -97,7 +97,6 @@ static void on_scale_value_changed(GtkRange *range) {
 
 void *simulate_clicks(gpointer user_data) {
     while (running) {
-        printf("%d %d", selected_buttonJ, selected_buttonI);
         int interval = 1000 / cps;
 
         if (selected_buttonI > -3 && selected_buttonJ > -3) {
@@ -286,11 +285,11 @@ void create_widgets(){
     combobox = gtk_combo_box_text_new();
     add_keybinds();
 
-    imageLeft = gtk_image_new_from_file("mouse_left.png");
+    imageLeft = gtk_image_new_from_file("IMG\\mouse_left.png");
     buttonLeft =  gtk_radio_button_new_with_label(NULL, "Left");
     gtk_button_set_image(GTK_BUTTON(buttonLeft), imageLeft);
     gtk_widget_set_name(buttonLeft, "custom-radio-button");
-    imageRight = gtk_image_new_from_file("mouse_right.png");
+    imageRight = gtk_image_new_from_file("IMG\\mouse_right.png");
     buttonRight =  gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON(buttonLeft), "Right");
     gtk_button_set_image(GTK_BUTTON(buttonRight), imageRight);
     gtk_widget_set_name(buttonRight, "custom-radio-button");
@@ -327,13 +326,11 @@ void create_widgets(){
 void create_window(int argc, char *argv[]){
     gtk_init(&argc, &argv);
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_title(GTK_WINDOW(window), "DYClick");
+    gtk_window_set_title(GTK_WINDOW(window), "ClytronClick");
     gtk_window_set_default_size(GTK_WINDOW(window), 300, 200);
-    GdkPixbuf *icon_pixbuf = gdk_pixbuf_new_from_file("icon.ico", NULL);
+    GdkPixbuf *icon_pixbuf = gdk_pixbuf_new_from_file("IMG\\icon.ico", NULL);
     if (icon_pixbuf != NULL) {
         gtk_window_set_icon(GTK_WINDOW(window), icon_pixbuf);
-    } else {
-        g_print("Failed to load icon file!\n");
     }
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
