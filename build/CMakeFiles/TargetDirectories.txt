@@ -1,0 +1,3 @@
+C:/Users/meteh/Documents/Projects/Accountant-Manager/build/CMakeFiles/app.dir
+C:/Users/meteh/Documents/Projects/Accountant-Manager/build/CMakeFiles/edit_cache.dir
+C:/Users/meteh/Documents/Projects/Accountant-Manager/build/CMakeFiles/rebuild_cache.dir
